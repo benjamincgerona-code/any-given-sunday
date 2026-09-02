@@ -16,7 +16,7 @@ export async function POST(request) {
 
   const { data: league, error: leagueError } = await db
     .from('leagues')
-    .select('*')
+    .select('id, name, join_code, entry_fee_cents, season_year, logo_color, announcement, created_at')
     .eq('join_code', joinCode.toUpperCase().trim())
     .single();
 
