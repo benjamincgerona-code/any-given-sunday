@@ -1,24 +1,32 @@
-# Any Given Sunday — Week 1 Build
+# Any Given Sunday — Week 2 Build
 
-Private league NFL pick'em. This is the **foundation phase**: league creation,
-join-by-code, nickname login, and the database schema for the entire Year 1
-feature set (picks, tiebreakers, payments, pot tracking).
+Private league NFL pick'em. League creation, join-by-code, nickname login,
+pick submission, auto-scoring, and the commissioner dashboard are all live.
 
 ## What's built so far
 - Dark, mobile-first theme (shield logo, ESPN/FanDuel-style palette)
 - Create a league (get a join code + commissioner PIN)
 - Join a league by code + nickname
-- Full database schema for the rest of the season (weeks, games, picks,
-  tiebreakers, payments) — ready for Week 2's build (pick submission,
-  scoring, leaderboard)
+- Full database schema for the season (weeks, games, picks, tiebreakers,
+  payments)
+- Commissioner: start a week, which auto-loads that week's NFL schedule from
+  ESPN's free public scoreboard feed (no API key needed) and flags the
+  latest-kickoff game as the MNF tiebreaker game
+- Players: pick a winner for every game, submit an MNF total-points
+  tiebreaker guess, picks lock automatically at the first kickoff of the week
+- Players: mark themselves paid; commissioner approves payments, which adds
+  to the week's pot
+- Commissioner: "Sync Scores & Run Scoring" pulls final scores from ESPN,
+  grades every pick, and — once every game in the week is final — crowns the
+  week's winner (most correct picks, MNF tiebreaker breaks ties)
+- Season-long standings (total correct picks, weeks won)
 - PWA manifest so it's installable on iPhone
 
-## What's next (Week 2–4)
-- Auto-load NFL schedule + scores (free ESPN JSON feed)
-- Pick submission UI, locks at kickoff
-- MNF total-points tiebreaker
-- Commissioner dashboard: approve payments, view picks, start new week
-- Auto scoring + leaderboard + winner celebration screen
+## What's next (Week 3–4)
+- Commissioner: edit league announcement, adjust entry fee
+- Winner celebration screen
+- Push/SMS reminders before lock
+- Multi-season history
 
 ---
 

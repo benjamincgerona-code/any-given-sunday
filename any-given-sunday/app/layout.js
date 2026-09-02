@@ -4,7 +4,6 @@ export const metadata = {
   title: 'Any Given Sunday',
   description: 'Weekly NFL pick\'em, private league.',
   manifest: '/manifest.json',
-  themeColor: '#0b0f1a',
 };
 
 export const viewport = {
